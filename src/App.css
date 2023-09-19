@@ -1,0 +1,28 @@
+.App {
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 200px;
+}
+
+.player {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.content {
+    flex-grow: 1;
+    position: relative;
+    background-color: #121212;
+    border-radius: 10px;
+}
+
+@media (orientation: portrait) {
+    .sidebar {
+        display: none;
+    }
+}

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Kanit', sans-serif;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+#root {
+  height: 100%;
+}
+
+a {
+  color: white;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee135;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}

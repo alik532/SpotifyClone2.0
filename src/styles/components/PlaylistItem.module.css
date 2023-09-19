@@ -1,0 +1,37 @@
+.item {
+	border-radius: 4px;
+	cursor: pointer;
+	display: flex;
+	gap: 10px;
+	color: white;
+	width: 100%;
+	height: 48px;
+	transition: .5;
+}
+
+.img {
+	border-radius: 4px;
+	height: 100%;
+}
+
+.img:hover {
+	transform: scale(1.1);
+}
+
+.info {
+	width: max-content;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.item:hover {
+	background-color: #2c2c2c;
+}
+
+.desc {
+	font-weight: 100;
+	font-size: 12px;
+	color: rgb(175, 175, 175);
+}

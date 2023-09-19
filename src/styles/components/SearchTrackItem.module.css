@@ -1,0 +1,97 @@
+.item {
+	cursor: pointer;
+	color: white;
+	width: 99%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 5px;
+	padding: 0px 13px;
+}
+
+.img {
+	height: 45px;
+}
+
+.mainInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 60%;
+}
+
+.first {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.second {
+	display: flex;
+}
+
+.item:hover {
+	background-color: rgba(255, 255, 255, 0.096);
+}
+
+.heart {
+	align-items: flex-end;
+	width: 40px;
+	margin-top: 4px;
+	height: fit-content;
+}
+
+.duration {
+	width: 40px;
+}
+
+.menu {
+	height: fit-content;
+	width: 20px;
+}
+
+.menuIcon {
+	display: none;
+	margin-top: 4px;
+}
+
+.artist {
+	display: flex;
+	overflow-x: visible;
+	color: rgb(175, 175, 175);
+}
+
+.play {
+ 	display: none;
+}
+
+.heart {
+	display: none;
+}
+
+.number {
+	width: 12px;
+}
+
+.item:hover .play {
+	display: initial;
+}
+
+.item:hover .menuIcon {
+	display: flex;
+	align-items: flex-end;
+}
+
+.item:hover .heart {
+	display: flex;
+	
+}
+.item:hover .num {
+	display: none;
+}
+
+.ctx {
+	z-index: 2;
+	position: absolute;
+}

@@ -1,0 +1,57 @@
+.header {
+	z-index: 10;
+	background-color: transparent;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding: 0px 20px;
+	position: sticky;
+	top: 0px;
+	left: 0;
+	right: 0;
+}
+
+.color {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.nav {
+	z-index: 1;
+	display: flex;
+	gap: 15px;
+}
+
+.button {
+	z-index: 1;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.815);
+	width: 35px;
+	height: 35px;
+	font-weight: 900;
+}
+
+.prof {
+	z-index: 1;
+	width: 35px;
+	height: 35px;
+	background-color: black;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	cursor: pointer;
+}

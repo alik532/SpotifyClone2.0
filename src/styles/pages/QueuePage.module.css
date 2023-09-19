@@ -1,0 +1,13 @@
+.page {
+	fill: white;
+	color: white;
+	padding: 20px;
+}
+
+.message {
+	color: gray;
+}
+
+.txt {
+	font-weight: 200;
+}
