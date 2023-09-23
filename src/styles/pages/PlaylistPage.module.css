@@ -108,3 +108,23 @@
 	z-index: 2;
 	position: absolute;
 }
+
+@media (orientation: portrait) {
+	.header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+		padding: 30px auto;
+	}
+	.data {
+		flex-direction: row;
+	}
+	.headerInfo {
+		gap: 8px;
+		word-wrap: break-word;
+	}
+	.headerImg {
+		width: 170px;
+		height: 170px;
+	}
+}

@@ -154,3 +154,20 @@
     height: 52px;
     width: 52px;
 }
+
+.mobilePlayer {
+    display: none;
+}
+
+@media (orientation: portrait) {
+    .mobilePlayer {
+        position: absolute;
+        display: initial;
+        background-color: black;
+        padding: 0;
+        bottom: 120px;
+    }
+    .player {
+        display: none;
+    }
+}

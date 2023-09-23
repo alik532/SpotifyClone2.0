@@ -25,4 +25,13 @@
     .sidebar {
         display: none;
     }
+    .content {
+        position: initial;
+        overflow-x: hidden;
+        border-radius: 0px;
+    }
+    .App {
+        width: 100vw;
+        padding: 0;
+    }
 }

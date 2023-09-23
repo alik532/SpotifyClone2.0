@@ -43,6 +43,11 @@ const PlaylistList:FC<IPlaylistList> = ({title, albums}) => {
           <PlaylistCard key={playlist.id} id={playlist.id} name={playlist.name} desc={playlist.label} img={playlist.images[1].url}/>
         </Link>))}
         </div>
+        <div className={classes.listMobile}>
+          {albums.map(playlist => (<Link key={playlist.id} to={`/playlist/${playlist.id}`}>
+            <PlaylistCard key={playlist.id} id={playlist.id} name={playlist.name} desc={playlist.label} img={playlist.images[1].url}/>
+          </Link>))}
+        </div>
     </div>
   )
 }

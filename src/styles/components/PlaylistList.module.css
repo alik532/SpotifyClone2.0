@@ -32,3 +32,27 @@
 .show:hover {
     color: white;
 }
+
+.listMobile {
+    display: none;
+}
+
+@media (orientation: portrait) {
+    .list {
+        display: none;
+    }
+    .listMobile {
+        display: initial;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 20px;
+    }
+    .header {
+        width: max-content !important;
+    }
+    .show {
+        display: none;
+    }
+}
