@@ -3,7 +3,7 @@ import classes from '../styles/pages/PlaylistPage.module.css'
 import { Link } from 'react-router-dom'
 import TrackItem from '../components/TrackItem'
 import { useParams } from 'react-router-dom'
-import { useGetPlaylistsQuery, useGetPlaylistMetadataQuery } from '../api/api'
+import { useGetPlaylistQuery, useGetPlaylistMetadataQuery } from '../api/api'
 import { useActions, useAppSelector } from '../hooks'
 import { getTotalDurationOfTracks, getformatDuration } from '../helpers/formattedTime'
 import { PlaySVG, HeartSVG, MenuSVG, LikedSVG } from '../assets/index'
@@ -26,7 +26,7 @@ const PlaylistPage: FC = () => {
 	const color = useAppSelector((state) => state.userPreferences.headerColor)
 
 	const {data: metaData, isError: isMetaDateErr } = useGetPlaylistMetadataQuery({id})
-	const {data, isLoading, isError: isDataErr } = useGetPlaylistsQuery({id})
+	const {data, isLoading, isError: isDataErr } = useGetPlaylistQuery({id})
 	
 	const {changeHeaderColor, likeAlbum, addAlbumToQueue} = useActions()
 

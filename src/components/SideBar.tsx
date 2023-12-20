@@ -15,7 +15,7 @@ const SideBar:FC = () => {
   const isSidebarExpanded = useAppSelector(state => state.userPreferences.sideBarExpanded)
   const likedAlbumIds = useAppSelector(state => state.liked.albums)
 
-  const {data} = useGetPlaylistsQuery({id: likedAlbumIds.join(",")})
+  const {data} = useGetPlaylistsQuery({ids: likedAlbumIds.join(",")})
 
   return (
     <div className={classes.sidebar} style={isSidebarExpanded ? {maxWidth: "20vw"} : {paddingTop: '65px', width: "20px", flexGrow: "0"}}>

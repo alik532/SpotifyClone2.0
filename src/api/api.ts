@@ -3,7 +3,7 @@ import { fetchBaseQuery } from '@reduxjs/toolkit/query'
 import { IAlbum, IImg } from '../types'
 
 const headers = {
-    'X-RapidAPI-Key': '6e02f7ad70msh20f68a0ff65e3dfp1739e7jsnadef5bc0992e',
+    'X-RapidAPI-Key': '21984204b7msh3267a67b6624b0ep1c87b2jsn6053aef7f9e6',
     'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
 }
 
@@ -14,12 +14,22 @@ export const api = createApi({
     }),
     keepUnusedDataFor: 900,
     endpoints: builder => ({
-        getPlaylists: builder.query<IGetPlaylistsResponse, {id: string | undefined}>({
+        getPlaylists: builder.query<IGetPlaylistsResponse, {ids: string | undefined}>({
+            query: (arg) => {
+                const {ids} = arg
+                return {
+                    url: 'albums/',
+                    params: {ids},
+                    headers,
+                }
+            }
+        }),
+        getPlaylist: builder.query<IGetPlaylistsResponse, {id: string | undefined}>({
             query: (arg) => {
                 const {id} = arg
                 return {
                     url: 'albums/',
-                    params: {id},
+                    params: {ids: id},
                     headers,
                 }
             }
@@ -39,7 +49,7 @@ export const api = createApi({
                 const {id} = arg
                 return {
                     url: 'tracks/',
-                    params: {id},
+                    params: {ids: id},
                     headers,
                 }
             }
@@ -57,7 +67,7 @@ export const api = createApi({
     })
 }) 
 
-export const {useGetPlaylistsQuery, useGetPlaylistMetadataQuery, useGetTracksQuery, useSearchTracksQuery } = api
+export const {useGetPlaylistsQuery, useGetPlaylistMetadataQuery, useGetTracksQuery, useSearchTracksQuery, useGetPlaylistQuery } = api
 
 interface IGetPlaylistMetadata {
     data: {
